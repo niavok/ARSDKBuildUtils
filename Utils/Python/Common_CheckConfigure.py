@@ -131,7 +131,7 @@ def Common_CheckConfigure(lib, confdir, makedir, ConfigureArgs, extraConfigureFi
         mdir = Chdir(makedir)
 
         # Run configure
-        if not ARExecute(CONFIGURE + ' ' + ARListAsBashArg(ConfigureArgs), failOnError=False):
+        if not ARExecute(CONFIGURE + ' --host=x86_64-w64-mingw32 ' + ARListAsBashArg(ConfigureArgs), failOnError=False):
             # Error
             # Create FAILFILE
             open(FAILFILE, 'a').close()

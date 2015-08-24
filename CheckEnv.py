@@ -77,6 +77,16 @@ targets = [
         'CC' : 'gcc',
         },
     {
+        'name' : 'Windows',
+        'platforms' : ['windows'],
+        'mandatoryPlatform' : False,
+        'bins' : ['x86_64-w64-mingw32-gcc', 'yasm', 'nasm'],
+        'libs' : ['-lz', '-pthread'],
+        'envs' : [],
+        'cmds' : [],
+        'CC' : 'x86_64-w64-mingw32-gcc',
+        },
+    {
         'name' : 'Android',
         'platforms' : ['darwin', 'linux'],
         'mandatoryPlatform' : False,
